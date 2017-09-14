@@ -14,3 +14,8 @@
 
 `tips:` 可快速构建react项目,支持jsx、es6/es7等; 可扩展...
 
+#### VUE2
+
+单页面应用的典范,我认为是目前构建最快的JS框架,奉上[脚手架(wabpack)](https://github.com/LiPusen/scaffold/tree/master/vue2)
+
+`tips:` 可快速构建VUE项目,做了相关性能优化,支持最新js语法,扩展性强,内置小型项目...
