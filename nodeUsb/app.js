@@ -9,7 +9,7 @@ var app = express();
 // 全局请求中间件
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+console.log(process.env.NODE_ENV)
 // 静态资源仓库
 app.use(express.static('www'));
 // 跨域

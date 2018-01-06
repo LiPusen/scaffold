@@ -1,18 +1,23 @@
 {
   "name": "nodeserver",
   "version": "1.0.0",
-  "description": "卡券服务",
+  "description": "node server",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=https://b-dev.qms888.com node app",
+    "start:dev": "cross-env NODE_ENV=https://b-dev.qms888.com node app",
+    "start:test": "cross-env NODE_ENV=https://b-dev.qms888.com node app",
+    "start:on": "cross-env NODE_ENV=https://b.qms888.com node app"
   },
   "author": "liyq",
   "license": "ISC",
   "devDependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
+    "cross-env": "^5.1.3",
     "express": "^4.16.2",
     "moment": "^2.20.1",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "os-tool": "0.0.3"
   }
 }

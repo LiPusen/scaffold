@@ -10,7 +10,7 @@ const mysql = {
 
 // b端微服务接口url
 const bsUr = {
-    oauth: "https://b-dev.qms888.com/qmsauth/oauth/check_token",
+    oauth: process.env.NODE_ENV + "/qmsauth/oauth/check_token",
 }
 
 // 鉴权字符串集合
@@ -20,8 +20,16 @@ const os = {
     w: "Basic d2FpdGVyOndhaXRlcg=="
 }
 
+// 数据库集
+const db = {
+    main: "qmsdb2",
+    card: "qms_card",
+    push: "impushdb"
+}
+
 module.exports = {
       mysql,
       bsUr,
-      os
+      os,
+      db
 };
