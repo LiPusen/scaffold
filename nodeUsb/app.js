@@ -4,6 +4,10 @@ var bodyParser = require('body-parser');
 
 // 接口
 var route = require("./routes");
+// orm
+var orm = require('./orm');
+// 定时任务
+var timeTask = require('./timetask');
 
 var app = express();
 // 全局请求中间件
@@ -20,7 +24,10 @@ app.all('*', function(req, res, next) {
     next();
 });
 
+orm(app);
 route(app);
+
+// require('./sequelize');
 
 app.set('port', process.env.PORT || 3005);
 app.listen(app.get('port'), function() {
